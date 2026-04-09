@@ -1,0 +1,74 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "train_end": "2017-12-31",
+      "test_start": "2018-02-01",
+      "test_end": "2018-12-31"
+    },
+    {
+      "fold": 2,
+      "train_end": "2018-12-31",
+      "test_start": "2019-02-01",
+      "test_end": "2019-12-31"
+    },
+    {
+      "fold": 3,
+      "train_end": "2019-12-31",
+      "test_start": "2020-02-01",
+      "test_end": "2020-12-31"
+    },
+    {
+      "fold": 4,
+      "train_end": "2020-12-31",
+      "test_start": "2021-02-01",
+      "test_end": "2021-12-31"
+    },
+    {
+      "fold": 5,
+      "train_end": "2021-12-31",
+      "test_start": "2022-02-01",
+      "test_end": "2022-12-31"
+    },
+    {
+      "fold": 6,
+      "train_end": "2022-12-31",
+      "test_start": "2023-02-01",
+      "test_end": "2023-12-31"
+    },
+    {
+      "fold": 7,
+      "train_end": "2023-12-31",
+      "test_start": "2024-02-01",
+      "test_end": "2025-09-21"
+    }
+  ],
+  "feature_cols": [
+    "RSI_dist_50",
+    "RSI_slope_3",
+    "MACD_hist",
+    "MACD_hist_slope_3",
+    "EMA_cross",
+    "Price_vs_SMA20",
+    "BB_pctB",
+    "BB_width",
+    "ATR_ratio",
+    "Vol_10d",
+    "Volume_ratio",
+    "Volume_spike",
+    "OBV_slope_norm",
+    "Ret_1d",
+    "Ret_3d",
+    "Ret_5d",
+    "Ret_10d",
+    "Ret_20d",
+    "Ret_momentum",
+    "In_uptrend",
+    "RSI_oversold",
+    "RSI_overbought",
+    "HL_range_pct",
+    "Gap_pct"
+  ],
+  "label_col": "Label_10d",
+  "embargo_days": 20
+}
