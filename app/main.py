@@ -22,7 +22,7 @@ PROCESSED_DIR = os.path.join(BASE_DIR, "data/processed")
 MODEL_DIR = os.path.join(PROCESSED_DIR, "models")
 RAW_DIR = os.path.join(BASE_DIR, "data/raw")
 FEATURES_PATH = os.path.join(PROCESSED_DIR, "all_stocks_features.parquet")
-CONFIG_PATH = os.path.join(PROCESSED_DIR, "fold_config.json")
+CONFIG_PATH = os.path.join(MODEL_DIR, "fold_config.json")
 
 with open(CONFIG_PATH) as f:
     CONFIG = json.load(f)
