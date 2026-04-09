@@ -7,6 +7,7 @@ import numpy as np
 import pickle
 import glob
 import re
+from pathlib import Path
 
 app = FastAPI()
 
@@ -17,17 +18,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-BASE_DIR = "C:/Users/sudee/projects/Final Year Project"
-PROCESSED_DIR = os.path.join(BASE_DIR, "data/processed")
-MODEL_DIR = os.path.join(PROCESSED_DIR, "models")
-RAW_DIR = os.path.join(BASE_DIR, "data/raw")
-FEATURES_PATH = os.path.join(PROCESSED_DIR, "all_stocks_features.parquet")
-CONFIG_PATH = os.path.join(PROCESSED_DIR, "fold_config.json")
+BASE_DIR = Path(__file__).resolve().parent.parent
+PROCESSED_DIR = BASE_DIR / "data" / "processed"
+MODEL_DIR = PROCESSED_DIR / "models"
+RAW_DIR = BASE_DIR / "data" / "raw"
+FEATURES_PATH = PROCESSED_DIR / "all_stocks_features.parquet"
+CONFIG_PATH = PROCESSED_DIR / "fold_config.json"
 
-with open(CONFIG_PATH) as f:
+with open(CONFIG_PATH, encoding="utf-8") as f:
     CONFIG = json.load(f)
 
-model_candidates = glob.glob(os.path.join(MODEL_DIR, "model_fold*.pkl"))
+model_candidates = glob.glob(str(MODEL_DIR / "model_fold*.pkl"))
 if not model_candidates:
     raise FileNotFoundError(f"No model files found in {MODEL_DIR}")
 
