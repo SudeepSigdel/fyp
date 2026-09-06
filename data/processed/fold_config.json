@@ -61,7 +61,7 @@
       "train_start": "2012-01-01",
       "train_end": "2025-12-31",
       "test_start": "2026-02-01",
-      "test_end": "2026-07-05"
+      "test_end": "2026-08-20"
     }
   ],
   "feature_cols": [
